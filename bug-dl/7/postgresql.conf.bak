@@ -1,0 +1,3 @@
+filter f_postgres { program(postgres) or program(pg_controldata) or program(pgsql.sh) or program(pg_ctl);  };
+destination d_postgres { file("/var/log/postgresql.log"); };
+log { source(src); filter(f_postgres); destination(d_postgres); };
