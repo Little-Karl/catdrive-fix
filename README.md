@@ -1,5 +1,16 @@
 # catdrive hardwhare control
 
+THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
+THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
+THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
+
+EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+
+each of the following section of command must be executed with the following combinitation otherwies things are goinf to get messed up
+each section of command can be added to task scheduler to perform different notification
+
 #red led
 
 i2cset -y -f 0 0x45 0x00 0x55
@@ -159,7 +170,6 @@ i2cset -y -f 0 0x45 0x77 0xc6
 sleep 1
 
 reboot
-
 
 
 
