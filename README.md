@@ -61,8 +61,7 @@ i2cset -y -f 0 0x45 0x35 128
 i2cset -y -f 0 0x45 0x36 128
 
 
-# small catdrive: yellow led
-# big catdrive: brown led
+# small catdrive: yellow led, big catdrive: brown led
 i2cset -y -f 0 0x45 0x00 0x55
 i2cset -y -f 0 0x45 0x01 0x01
 i2cset -y -f 0 0x45 0x31 0x03
