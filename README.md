@@ -1,14 +1,21 @@
 # catdrive hardwhare control
 
 THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
-THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
+
 THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
 
+THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
+
+
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
+
 
 each of the following section of command must be executed with the following combinitation otherwies things are goinf to get messed up
+
 each section of command can be added to task scheduler to perform different notification
 
 #red led
