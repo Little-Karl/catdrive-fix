@@ -22,7 +22,7 @@ each section of command can be added to task scheduler to perform different noti
 
 
 
-#red led
+# red led
 
 i2cset -y -f 0 0x45 0x00 0x55
 
