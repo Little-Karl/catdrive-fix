@@ -18,6 +18,10 @@ each of the following section of command must be executed with the following com
 
 each section of command can be added to task scheduler to perform different notification
 
+
+
+
+
 #red led
 
 i2cset -y -f 0 0x45 0x00 0x55
