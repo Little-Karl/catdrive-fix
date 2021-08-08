@@ -1,53 +1,55 @@
 # catdrive hardwhare control
 
-THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
-
-THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
-
-THIS ONLY APPLY TO CATDRIVE RUNING DSM7.0
-
-
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
 
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
 
 EVERY COMMAND BELOW MUST BE EXECUTED AS ROOT
-
 
 each of the following section of command must be executed with the following combinitation otherwies things are goinf to get messed up
 
 each section of command can be added to task scheduler to perform different notification
 
+in task schedular the space between each commend bust be removed otherwise it wont work
+
 # command structer
-the command below reset the led controller
 ```sh
-i2cset -y -f 0 0x45 0x00 0x55
-i2cset -y -f 0 0x45 0x01 0x01
-i2cset -y -f 0 0x45 0x31 0x03
-i2cset -y -f 0 0x45 0x32 0x03
-i2cset -y -f 0 0x45 0x33 0x03
-i2cset -y -f 0 0x45 0x30 0x07
-```
-red led register
-```sh
+#init the led controler
+i2cset -y -f 0 0x45 0x00 0x55 # off all led
+i2cset -y -f 0 0x45 0x01 0x01 # reset the led controller
+i2cset -y -f 0 0x45 0x30 0x07 # led on
+
+# set max power fo reach led
+i2cset -y -f 0 0x45 0x31 0x72
+i2cset -y -f 0 0x45 0x32 0x72
+i2cset -y -f 0 0x45 0x33 0x72
+        
+#control how long each led takes to go from 0 to 100
+i2cset -y -f 0 0x45 0x37 0x44
+i2cset -y -f 0 0x45 0x3a 0x55
+i2cset -y -f 0 0x45 0x3d 0x66
+
+#control the how long each led turn on and off
+i2cset -y -f 0 0x45 0x38 0x44
+i2cset -y -f 0 0x45 0x3b 0x55
+i2cset -y -f 0 0x45 0x3e 0x66
+i2cset -y -f 0 0x45 0x39 0x40
+i2cset -y -f 0 0x45 0x3c 0x40
+i2cset -y -f 0 0x45 0x3f 0x40
+
+# 0-255，the highter the brighter the led goes
 i2cset -y -f 0 0x45 0x34 128
-```
-small catdrive green register, big catdrive should be green as well but it's orange for some reason I'm lookinto that
-```sh
 i2cset -y -f 0 0x45 0x35 128
-```
-blue led register
-```sh
 i2cset -y -f 0 0x45 0x36 128
 ```
 # red led
 ```sh
 i2cset -y -f 0 0x45 0x00 0x55
 i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x30 0x07
 i2cset -y -f 0 0x45 0x31 0x03
 i2cset -y -f 0 0x45 0x32 0x03
 i2cset -y -f 0 0x45 0x33 0x03
-i2cset -y -f 0 0x45 0x30 0x07
 i2cset -y -f 0 0x45 0x34 128
 i2cset -y -f 0 0x45 0x35 0
 i2cset -y -f 0 0x45 0x36 0
@@ -64,7 +66,6 @@ i2cset -y -f 0 0x45 0x34 0
 i2cset -y -f 0 0x45 0x35 128
 i2cset -y -f 0 0x45 0x36 0
 ```
-
 # blue led
 ```sh
 i2cset -y -f 0 0x45 0x00 0x55
@@ -77,10 +78,20 @@ i2cset -y -f 0 0x45 0x34 0
 i2cset -y -f 0 0x45 0x35 0
 i2cset -y -f 0 0x45 0x36 128
 ```
-
+# small catdrive: yellow led, big catdrive: brown led, the trouth is both should be weight
+```sh
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+i2cset -y -f 0 0x45 0x34 128
+i2cset -y -f 0 0x45 0x35 128
+i2cset -y -f 0 0x45 0x36 128
+```
 # rainbow color led
 ```sh
-
 i2cset -y -f 0 0x45 0x00 0x55
 i2cset -y -f 0 0x45 0x01 0x01
 i2cset -y -f 0 0x45 0x30 0x07
@@ -101,26 +112,17 @@ i2cset -y -f 0 0x45 0x35 128
 i2cset -y -f 0 0x45 0x36 128
 ```
 
-
-
-
-# small catdrive: yellow led, big catdrive: brown led
-```sh
-i2cset -y -f 0 0x45 0x00 0x55
-i2cset -y -f 0 0x45 0x01 0x01
-i2cset -y -f 0 0x45 0x31 0x03
-i2cset -y -f 0 0x45 0x32 0x03
-i2cset -y -f 0 0x45 0x33 0x03
-i2cset -y -f 0 0x45 0x30 0x07
-i2cset -y -f 0 0x45 0x34 128
-i2cset -y -f 0 0x45 0x35 128
-i2cset -y -f 0 0x45 0x36 128
-```
-
 # led off
 ```sh
 i2cset -y -f 0 0x45 0x00 0x55
 ```
+# WARNING
+
+THE ALL COMMAND BELOW ONLY APPLY TO CATDRIVE RUNING DSM7
+
+THE ALL COMMAND BELOW ONLY APPLY TO CATDRIVE RUNING DSM7
+
+THE ALL COMMAND BELOW ONLY APPLY TO CATDRIVE RUNING DSM7
 
 # big catdrive poweroff
 ```sh
