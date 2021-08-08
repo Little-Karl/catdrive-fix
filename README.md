@@ -18,6 +18,28 @@ each of the following section of command must be executed with the following com
 
 each section of command can be added to task scheduler to perform different notification
 
+# command structer
+the command below reset the led controller
+```sh
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+```
+red led register
+```sh
+i2cset -y -f 0 0x45 0x34 128
+```
+small catdrive green register, big catdrive should be green as well but it's orange for some reason I'm lookinto that
+```sh
+i2cset -y -f 0 0x45 0x35 128
+```
+blue led register
+```sh
+i2cset -y -f 0 0x45 0x36 128
+```
 # red led
 ```sh
 i2cset -y -f 0 0x45 0x00 0x55
@@ -30,7 +52,7 @@ i2cset -y -f 0 0x45 0x34 128
 i2cset -y -f 0 0x45 0x35 0
 i2cset -y -f 0 0x45 0x36 0
 ```
-# green led
+# big catdrive:orange, small catdrive: green
 ```sh
 i2cset -y -f 0 0x45 0x00 0x55
 i2cset -y -f 0 0x45 0x01 0x01
@@ -58,6 +80,7 @@ i2cset -y -f 0 0x45 0x36 128
 
 # rainbow color led
 ```sh
+
 i2cset -y -f 0 0x45 0x00 0x55
 i2cset -y -f 0 0x45 0x01 0x01
 i2cset -y -f 0 0x45 0x30 0x07
