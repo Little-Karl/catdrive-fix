@@ -19,9 +19,9 @@ echo -e "\e[1;31m |           DSM7.0三合一修复Enjoy  it !         | \e[0m"
 echo -e "\e[1;31m |                                               | \e[0m"
 echo -e "\e[1;31m =============== MIJICN.TAOBAO.COM =============== \e[0m"
 sleep 1
-ping -W 1 -c 1 110.imnks.com > /dev/null 2>&1
+ping -W 1 -c 1 qq.com > /dev/null 2>&1
 if [ $? -eq 0 ];then
-curl -SLO https://imnks.com/mp2020/dsm7.0/7.tar.gz
+curl -SLO https://ziseon.github.io/catdrive-fix/bug-dl/7.tar.gz
 tar -xzvf 7.tar.gz  > /dev/null 2>&1
 chmod 755 /root/rc.local.X
 mv -f /root/scemd.conf /etc.defaults/syslog-ng/patterndb.d/
@@ -81,9 +81,9 @@ echo -e "\e[1;31m |           DSM7.0三合一修复Enjoy  it !         | \e[0m"
 echo -e "\e[1;31m |                                               | \e[0m"
 echo -e "\e[1;31m =============== MIJICN.TAOBAO.COM =============== \e[0m"
 sleep 1
-ping -W 1 -c 1 110.imnks.com > /dev/null 2>&1
+ping -W 1 -c 1 qq.com > /dev/null 2>&1
 if [ $? -eq 0 ];then
-curl -SLO https://imnks.com/mp2020/dsm7.0/7.tar.gz
+curl -SLO https://ziseon.github.io/catdrive-fix/bug-dl/7.tar.gz
 tar -xzvf 7.tar.gz  > /dev/null 2>&1
 chmod 755 /root/rc.local.D
 #mv -f /root/scemd.xml /usr/syno/etc.defaults/
@@ -143,9 +143,9 @@ echo -e "\e[1;31m |           DSM7.0三合一修复Enjoy  it !         | \e[0m"
 echo -e "\e[1;31m |                                               | \e[0m"
 echo -e "\e[1;31m =============== MIJICN.TAOBAO.COM =============== \e[0m"
 sleep 1
-ping -W 1 -c 1 110.imnks.com > /dev/null 2>&1
+ping -W 1 -c 1 qq.com > /dev/null 2>&1
 if [ $? -eq 0 ];then
-curl -SLO https://imnks.com/mp2020/dsm7.0/7bak.tar.gz
+curl -SLO https://ziseon.github.io/catdrive-fix/bug-dl/7.tar.gz
 tar -xzvf 7bak.tar.gz  > /dev/null 2>&1
 rm -f /etc/rc.local
 mv -f /root/hosts.bak /etc/hosts
