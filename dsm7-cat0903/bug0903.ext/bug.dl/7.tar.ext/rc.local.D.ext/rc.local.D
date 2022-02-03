@@ -1,0 +1,140 @@
+#!/bin/sh
+echo -e "\e[1;33m 买猫盘就选：咪叽数码淘宝店，独家120j引导绝不掉IP  \e[0m"
+echo -e "\e[1;31m =================== MAOPAN.CC =================== \e[0m"
+echo -e "\e[1;31m |                                               | \e[0m"
+echo -e "\e[1;31m |                  Enjoy  it !                  | \e[0m"
+echo -e "\e[1;31m |                                               | \e[0m"
+echo -e "\e[1;31m =============== MIJICN.TAOBAO.COM =============== \e[0m"
+
+
+if [ "$1" = "R" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+i2cset -y -f 0 0x45 0x34 128
+i2cset -y -f 0 0x45 0x35 0
+i2cset -y -f 0 0x45 0x36 0
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "G" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+i2cset -y -f 0 0x45 0x34 0
+i2cset -y -f 0 0x45 0x35 128
+i2cset -y -f 0 0x45 0x36 0
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "B" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+i2cset -y -f 0 0x45 0x34 0
+i2cset -y -f 0 0x45 0x35 0
+i2cset -y -f 0 0x45 0x36 128
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "W" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x31 0x03
+i2cset -y -f 0 0x45 0x32 0x03
+i2cset -y -f 0 0x45 0x33 0x03
+i2cset -y -f 0 0x45 0x30 0x07
+i2cset -y -f 0 0x45 0x34 128
+i2cset -y -f 0 0x45 0x35 128
+i2cset -y -f 0 0x45 0x36 128
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+i2cset -y -f 0 0x45 0x01 0x01
+i2cset -y -f 0 0x45 0x30 0x07
+        
+i2cset -y -f 0 0x45 0x31 0x72
+i2cset -y -f 0 0x45 0x32 0x72
+i2cset -y -f 0 0x45 0x33 0x72
+        
+i2cset -y -f 0 0x45 0x37 0x44  
+i2cset -y -f 0 0x45 0x3a 0x55
+i2cset -y -f 0 0x45 0x3d 0x66      
+
+i2cset -y -f 0 0x45 0x38 0x44
+i2cset -y -f 0 0x45 0x3b 0x55
+i2cset -y -f 0 0x45 0x3e 0x66
+i2cset -y -f 0 0x45 0x39 0x40
+i2cset -y -f 0 0x45 0x3c 0x40
+i2cset -y -f 0 0x45 0x3f 0x40
+
+i2cset -y -f 0 0x45 0x34 128
+i2cset -y -f 0 0x45 0x35 128
+i2cset -y -f 0 0x45 0x36 128
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "X" ]
+then
+i2cset -y -f 0 0x45 0x00 0x55
+
+killall -9 synoscsitmonitor
+sleep 60
+/usr/sbin/ntpdate -u ntp1.aliyun.com
+systemctl stop pkg-scsit-monitor.service
+
+fi
+
+
+if [ "$1" = "K" ]
+then
+i2cset -y -f 0 0x45 0x77 0xc6
+sleep 1
+reboot
+fi

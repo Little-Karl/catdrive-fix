@@ -1,0 +1,14 @@
+# Any manual change will be lost if the host name is changed or system upgrades.
+127.0.0.1	localhost
+::1		localhost
+127.0.0.1	DS120j
+::1		DS120j
+# IMNKS.COM QQ GROUP:1164093856 QQ:656020080
+52.84.166.71 api.themoviedb.org
+52.84.166.68 api.themoviedb.org
+18.65.159.31 api.themoviedb.org
+13.35.0.128 api.themoviedb.org
+99.84.238.181 image.tmdb.org
+13.226.254.58 image.tmdb.org
+65.8.164.121 image.tmdb.org
+54.192.73.28 image.tmdb.org
