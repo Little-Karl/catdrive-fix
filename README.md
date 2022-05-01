@@ -143,6 +143,11 @@ ALL COMMAND BELOW ONLY APPLY TO CATDRIVE RUNING DSM7
 
 ALL COMMAND BELOW ONLY APPLY TO CATDRIVE RUNING DSM7
 
+#Time update after restart
+```sh
+/usr/sbin/ntpdate -u time.google.com
+```
+
 # big catdrive poweroff
 ```sh
 /usr/bin/systemctl --force poweroff
